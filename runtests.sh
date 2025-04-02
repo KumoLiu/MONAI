@@ -720,7 +720,7 @@ if [ $doUnitTests = true ]
 then
     echo "${separator}${blue}unittests${noColor}"
     torch_validate
-    ${cmdPrefix}${cmd} ./tests/runner.py -p "^test_handler*"  # only run handler_mean tests
+    ${cmdPrefix}${cmd} ./tests/runner.py -p "^test_handler*|^test_fl_*"  # run handler_mean tests and fl tests
 fi
 
 # distributed test only
