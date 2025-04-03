@@ -707,7 +707,7 @@ then
     then
         install_deps
     fi
-    cmd=""${PY_EXE}" -m coverage run --append"
+    cmd=""${PY_EXE}" -m coverage run --append --concurrency=multiprocessing"
 fi
 
 # # download test data if needed
